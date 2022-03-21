@@ -43,14 +43,14 @@ void Automata::choice(int c) {
 
 void Automata::check() {
 	if (state == CHECK) {
-		if (cash - prices[choice_user] >= 0)
+		if (cash - prices[choice_user - 1] >= 0)
 			cook();
 		else state = ACCEPT;
 	}
 }
 
 int Automata::cancel() {
-	if (state == ACCEPT || state == CHECK) {
+	if (state == ACCEPT || state == CHECK || state == WAIT) {
 		state = WAIT;
 		int c = cash;
 		cash = 0;
