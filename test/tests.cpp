@@ -40,7 +40,7 @@ TEST(taskA, test4)
   EXPECT_EQ(COOK, result);
 }
 
-TEST(taskA, test4)
+TEST(taskA, test5)
 {
   Automata a = Automata();
   a.on();
@@ -51,7 +51,7 @@ TEST(taskA, test4)
   EXPECT_EQ(80, result);
 }
 
-TEST(taskA, test4)
+TEST(taskA, test6)
 {
   Automata a = Automata();
   a.on();
