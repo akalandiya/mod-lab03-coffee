@@ -1,18 +1,15 @@
-// Copyright 2022 GHA Test Team
-
+// Copyright 2022 UNN-IASR
 #include <gtest/gtest.h>
 #include "Automata.h"
 
-TEST(taskA, test1)
-{
+TEST(taskA, test1) {
   Automata a = Automata();
   a.on();
   int result = a.getState();
   EXPECT_EQ(WAIT, result);
 }
 
-TEST(taskA, test2)
-{
+TEST(taskA, test2) {
   Automata a = Automata();
   a.on();
   a.coin(100);
@@ -20,8 +17,7 @@ TEST(taskA, test2)
   EXPECT_EQ(ACCEPT, result);
 }
 
-TEST(taskA, test3)
-{
+TEST(taskA, test3) {
   Automata a = Automata();
   a.on();
   a.coin(100);
@@ -30,8 +26,7 @@ TEST(taskA, test3)
   EXPECT_EQ(ACCEPT, result);
 }
 
-TEST(taskA, test4)
-{
+TEST(taskA, test4) {
   Automata a = Automata();
   a.on();
   a.coin(200);
@@ -40,8 +35,7 @@ TEST(taskA, test4)
   EXPECT_EQ(COOK, result);
 }
 
-TEST(taskA, test5)
-{
+TEST(taskA, test5) {
   Automata a = Automata();
   a.on();
   a.coin(200);
@@ -51,8 +45,7 @@ TEST(taskA, test5)
   EXPECT_EQ(80, result);
 }
 
-TEST(taskA, test6)
-{
+TEST(taskA, test6) {
   Automata a = Automata();
   a.on();
   a.coin(200);
