@@ -1,33 +1,35 @@
+// Copyright 2022 UNN-IASR
 #pragma once
 #include <string>
-using namespace std;
+using std::string;
 
 enum STATES {
-	OFF,
-	WAIT,
-	COOK,
-	ACCEPT,
-	CHECK,
+  OFF,
+  WAIT,
+  COOK,
+  ACCEPT,
+  CHECK
 };
 
 class Automata {
-private:
-	int cash; //для хранения текущей суммы
-	string menu[4] = { "Cappuccino", "Latte", "Green tea", "Black tea" }; //напитки
-	int prices[4] = { 120, 130, 100, 100 }; //цены
-	STATES state; //текущее состояние автомата
-	int choice_user;
+ private:
+  int cash;
+  string menu[4] = { "Cappuccino", "Latte",
+  "Green tea", "Black tea" };
+  int prices[4] = { 120, 130, 100, 100 };
+  STATES state;
+  int choice_user;
 
-public:
-	Automata(); //конструктор
-	void on(); //включение автомата;
-	void off();//выключение автомата;
-	void coin(int c); //занесение денег на счёт пользователем
-	string* etMenu(); // считывание меню с напитками и ценами для пользователя;
-	STATES getState();//считывание текущего состояния для пользователя;
-	void choice(int c);//выбор напитка пользователем;
-	void check();//проверка наличия необходимой суммы;
-	int cancel();//отмена сеанса обслуживания пользователем;
-	void cook();//имитация процесса приготовления напитка;
-	void finish();//завершение обслуживания пользователя.
+ public:
+  Automata();
+  void on();
+  void off();
+  void coin(int c);
+  string* etMenu();
+  STATES getState();
+  void choice(int c);
+  void check();
+  int cancel();
+  void cook();
+  void finish();
 };
