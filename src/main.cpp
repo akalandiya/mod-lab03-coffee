@@ -1,11 +1,11 @@
+// Copyright 2022 UNN-IASR
 #include <iostream>
 #include "Automata.h"
 
 using std::string;
 using std::cout;
 
-int main()
-{
+int main() {
     Automata a;
     int b;
     a.on();
@@ -15,8 +15,8 @@ int main()
     a.choice(1);
     cout << "super! gotovim!\n";
     a.finish();
-    b=a.cancel();
-    cout << "sdacha! "<<b;
+    b = a.cancel();
+    cout << "sdacha! " << b;
     a.off();
     cout << "\nautomat vikluchen!\n";
 }
